@@ -12,7 +12,9 @@
 
 </div>
 
-  <div th:fragment="job-details" th:each="job : ${jobs}">
+<!--   new fragment for task four   -->
+<div th:fragment="jobListing(job)">
+<!--  <div th:fragment="job-details" th:each="job : ${jobs}">   -->
   <table th:each="job : ${jobs}" class="job-listing">
     <tr>
       <th>ID</th>
@@ -22,6 +24,11 @@
     <tr>
       <th>Name</th>
       <td th:text="${job.name}"></td>
+    </tr>
+
+    <tr>
+      <th>Employer</th>
+      <td th:text="${job.employer}"></td>
     </tr>
 
     <tr>

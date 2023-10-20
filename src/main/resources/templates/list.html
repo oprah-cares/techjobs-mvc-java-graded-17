@@ -18,9 +18,10 @@
     </th:block>
   </tr>
   <tr>
-    <!-- TODO #2: Complete the View Jobs By Category Table. -->
-
-    <td></td> <!-- Feel free to remove or modify this element if necessary. -->
+<!--TODO #5 Figure out why all jobs is looping forever.-->
+  <td>
+    <a th:href="@{/list/jobs(column='all')}">View All</a>
+  </td>
 
     <td th:each="category : ${tableChoices}">
       <ul>
